@@ -45,7 +45,7 @@ var Player = function() {
     this.moveX = 0;
     this.moveY = 0;
     this.speed = 5;
-}
+};
 
 
 Player.prototype.handleInput = function(key) {
@@ -69,10 +69,10 @@ Player.prototype.handleInput = function(key) {
             this.moveX -= 100;
     if(key === 'right')
             this.moveX += 100;
-}
+};
 
 
-Player.prototype.update = function(dt) {
+Player.prototype.update = function() {
  
     if(this.moveX > 0)
     {
@@ -126,6 +126,5 @@ function getRandomValue(min, max) {
     var range = max - min;
     var randomValue = Math.floor(Math.random() * range);
     return randomValue + min;
-};
-
+}
 
